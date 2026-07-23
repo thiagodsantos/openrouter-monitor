@@ -1,0 +1,67 @@
+{
+  "name": "openrouter-monitor",
+  "displayName": "OpenRouter Monitor",
+  "description": "Track OpenRouter.ai credits (USD used/remaining) and token usage right in the VS Code status bar.",
+  "version": "0.1.0",
+  "publisher": "local-dev",
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "openrouterMonitor.setApiKey",
+        "title": "OpenRouter: Set API Key"
+      },
+      {
+        "command": "openrouterMonitor.refresh",
+        "title": "OpenRouter: Refresh Usage Now"
+      },
+      {
+        "command": "openrouterMonitor.showDetails",
+        "title": "OpenRouter: Show Usage Details"
+      },
+      {
+        "command": "openrouterMonitor.askModel",
+        "title": "OpenRouter: Ask Model (tracks token usage)"
+      },
+      {
+        "command": "openrouterMonitor.resetTokenStats",
+        "title": "OpenRouter: Reset Local Token Stats"
+      }
+    ],
+    "configuration": {
+      "title": "OpenRouter Monitor",
+      "properties": {
+        "openrouterMonitor.refreshIntervalMinutes": {
+          "type": "number",
+          "default": 5,
+          "minimum": 0,
+          "description": "How often (in minutes) to automatically refresh credit usage from OpenRouter. Set to 0 to disable auto-refresh."
+        },
+        "openrouterMonitor.defaultModel": {
+          "type": "string",
+          "default": "openai/gpt-4o-mini",
+          "description": "Default model slug suggested by the 'OpenRouter: Ask Model' command."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -w -p ./",
+    "vscode:prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.86.0",
+    "typescript": "^5.4.0"
+  }
+}
