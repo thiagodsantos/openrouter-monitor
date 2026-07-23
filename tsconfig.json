@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "NodeNext",
     "target": "ES2022",
     "lib": ["ES2022", "DOM"],
     "outDir": "dist",
     "rootDir": "src",
     "sourceMap": true,
     "strict": true,
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "esModuleInterop": true

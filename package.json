@@ -1,7 +1,11 @@
 {
   "name": "openrouter-monitor",
+  "icon": "resources/icon.png",
   "displayName": "OpenRouter Monitor",
   "description": "Track OpenRouter.ai credits (USD used/remaining) and token usage right in the VS Code status bar.",
+  "repository": {
+    "url": "https://github.com/thiagodsantos/openrouter-credits"
+  },
   "version": "0.1.0",
   "publisher": "local-dev",
   "engines": {
