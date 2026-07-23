@@ -2,6 +2,8 @@
 
 Track your [OpenRouter.ai](https://openrouter.ai) credit usage and token consumption directly from the VS Code status bar.
 
+![Using](using.gif)
+
 ## Features
 
 - **Connects to OpenRouter.ai** using your personal API key (stored securely via VS Code's Secret Storage — never written to disk in plain text).
