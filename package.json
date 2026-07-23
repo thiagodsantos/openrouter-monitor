@@ -1,5 +1,5 @@
 {
-  "name": "openrouter-usage-monitor",
+  "name": "openrouter-monitor",
   "icon": "resources/icon.png",
   "displayName": "OpenRouter Monitor",
   "version": "0.1.1",
